@@ -1,6 +1,8 @@
 # Ignore dependency directory
 node_modules/
 
+# Ignore build directory (for generated README.md file)
+build/
 
 # Ignore logs
 logs
