@@ -87,7 +87,7 @@ ${data.description}
 3. [License](#license)
 4. [Contributing](#contributing)
 5. [Tests](#tests)
-6. [Questions](#questions);
+6. [Questions](#questions)
 
 ### [Installation](#installation)
 <a name="installation"></a>

@@ -79,7 +79,7 @@ async function createBuildDir() {
 
 async function writeToFile(fileName, data) {
     try {
-        await writeFile(fileName, data);
+        return await writeFile(fileName, data);
     } catch (err) {
         console.error(err.message);
     }
@@ -96,7 +96,7 @@ function init() {
         }) 
         .catch((err) => {
             if (err) throw err;
-        })
+        });
 }
 
 init();

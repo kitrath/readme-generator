@@ -19,3 +19,6 @@
 **THEN** this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
 - **WHEN** I click on the links in the Table of Contents<br>
 **THEN** I am taken to the corresponding section of the README
+
+***Screencast***
+Watch a short video here: [README Generator Screencast](https://watch.screencastify.com/v/60LUCHEM9sukGoCGmvpo)
