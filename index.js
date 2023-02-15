@@ -7,16 +7,42 @@ const questions = [
         name: 'title',
         type: 'input',
         message: 'What is the title of your project?',
+        validate(answer) {
+            if (!answer) {
+                return 'Your project must have a title'
+            }
+            return true;
+        }
+    },
+    {
+        name: 'githubUsername',
+        type: 'input',
+        message: 'What is your github username?',
+    },
+    {
+        name: 'emailInQuestions',
+        type: 'list',
+        message: 'Would you like to put your email address in the `Questions` section of the README?',
+        choices: ["yes", "no"]
+    },
+    {
+        name: 'email',
+        type: 'input',
+        message: 'Enter your email address: ',
+        when(answers) {
+            return answers.emailInQuestions === "yes";
+        },
+    },
+    {
+        name: 'license',
+        type: 'list',
+        message: 'How is your project licensed?',
+        choices: ['MIT', 'ISC', 'BSD2', 'BSD3', 'GPLv2', 'GPLv3', 'Apache', 'None' ],
     },
     {
         name: 'description',
         type: 'input',
         message: 'Briefly describe your project: ',
-    },
-    {
-        name: 'license',
-        type: 'input',
-        message: 'What is your license?',
     },
     {
         name: 'installation',
@@ -38,11 +64,6 @@ const questions = [
         type: 'input',
         message: 'How can users test your project?',
     },
-    {
-        name: 'questions',
-        type: 'input',
-        message: 'What should users do if they have questions about your project?'
-    }
 ];
 
 async function createBuildDir() {
@@ -64,7 +85,7 @@ async function writeToFile(fileName, data) {
     }
 }
 
-async function init() {
+function init() {
     inquirer
         .prompt(questions)
         .then((answers) => {
