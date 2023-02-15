@@ -1,7 +1,7 @@
 const licenses = {
   'MIT': {
     name: 'MIT-0',
-    text: 'MIT No Attribution Licesnse',
+    text: 'MIT No Attribution License',
     link: 'https://opensource.org/licenses/MIT',
     badge: 'https://img.shields.io/badge/License-MIT-yellow.svg',
   },
@@ -43,17 +43,36 @@ const licenses = {
   },
 };
 
-function renderLicenseBadge(license) {return '';}
+function renderLicenseBadge(license) {
+  if (license !== 'None') {
+    const li = licenses[license];
+    return `[![License: ${li.name}](${li.badge})](${li.link})`;
+  }
+  return '';
+}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (license !== 'None') {
+    const li = licenses[license];
+    return `[${li.link}](${li.link})`;
+  }
+  return '';
+}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) { return ''; }
+function renderLicenseSection(license) {
+  const licenseLink = renderLicenseLink(license);
+  if (licenseLink) {
+    const li = licenses[license];
+    return `${li.text}: ${licenseLink}`;
+  }
+  return 'This project has not chosen a license yet.';
+}
 
-// TODO: Create a function to generate markdown for README
+function renderQuestions(email, userName) {
+  const mail = `, email: [${email}](${email})` ?? '';
+  return `Contact [${userName}](https://github.com/${userName})` + mail; 
+}
+
 function generateMarkdown(data) {
   return `
 # ${data.title}
@@ -92,8 +111,7 @@ ${data.tests}
 
 ### [Questions](#questions)
 <a name="questions"></a>
-${data.questions}
-
+${renderQuestions(data.email, data.githubUsername)}
 
 `;
 }
