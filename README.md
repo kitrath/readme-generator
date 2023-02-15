@@ -1,7 +1,7 @@
 # README Generator
 
 ## Description
-Generates a `README.md` file from a series of prompts at the command line.  Application prompts for project title, a description, developer's GitHub username, and an optional password. Generated README displays a license badge, and automatically generates a link to an online version of your project's chosen license.  Additionally, your generated file contains a linked table of contents to the following headings: Installation, Usage, License, Contributing, Tests, and Questions.<br /><br />
+Generates a `README.md` file from a series of prompts at the command line.  Application prompts for project title, a description, developer's GitHub username, and an optional email address. Generated README displays a license badge, and automatically generates a link to an online version of your project's chosen license.  Additionally, your generated file contains a linked table of contents to the following headings: Installation, Usage, License, Contributing, Tests, and Questions.<br /><br />
 **Brief walk-through video: [README Generator Screencast](https://watch.screencastify.com/v/60LUCHEM9sukGoCGmvpo)**
 ## Installation
 1. Clone this repository: `git clone git@github.com:kitrath/readme-generator.git`
