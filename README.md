@@ -1,24 +1,13 @@
 # README Generator
 
-## User Story
-**AS A** developer<br>
-**I WANT** a README generator<br>
-**SO THAT** I can quickly create a professional README for a new project
-
-## Acceptance Criteria
-**GIVEN** a command-line application that accepts user input
-- **WHEN** I am prompted for information about my application repository<br>
-**THEN** a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-- **WHEN** I enter my project title<br>
-**THEN** this is displayed as the title of the README
-- **WHEN** I enter a description, installation instructions, usage information, contribution guidelines, and test instructions<br>
-**THEN** this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-- **WHEN** I choose a license for my application from a list of options<br>
-**THEN** a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-- **WHEN** I enter my GitHub username<br>
-**THEN** this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-- **WHEN** I click on the links in the Table of Contents<br>
-**THEN** I am taken to the corresponding section of the README
-
-***Screencast***
-Watch a short video here: [README Generator Screencast](https://watch.screencastify.com/v/60LUCHEM9sukGoCGmvpo)
+## Description
+Generates a `README.md` file from a series of prompts at the command line.  Application prompts for project title, a description, developer's GitHub username, and an optional password. Generated README displays a license badge, and automatically generates a link to an online version of your project's chosen license.  Additionally, your generated file contains a linked table of contents to the following headings: Installation, Usage, License, Contributing, Tests, and Questions.<br /><br />
+**Brief walk-through video: [README Generator Screencast](https://watch.screencastify.com/v/60LUCHEM9sukGoCGmvpo)**
+## Installation
+1. Clone this repository: `git clone git@github.com:kitrath/readme-generator.git`
+2. Navigate to the base directory: `cd readme-generator`
+3. Install dependencies: `npm install`
+## Usage
+Navigate to the `readme-generator/` directory and run `node index.js`.  You will be asked a series of questions from the command-line that will help you generate a README file for your project.  If you want to generate a skeleton README file, you may skip (press ENTER) the Description, Installation, Usage, Contributing, Questions, and Tests portions of the command-line survey.  Your generated README file will contain headings for each of these, but you can fill in these sections from within your editor of choice after the application generates your file.  *The generated file will be found at `./build/README.md`.*
+## Sreenshot
+<p align="center"><img src="./screen.png" width="400px" /></p>
