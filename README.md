@@ -9,5 +9,5 @@ Generates a `README.md` file from a series of prompts at the command line.  Appl
 3. Install dependencies: `npm install`
 ## Usage
 Navigate to the `readme-generator/` directory and run `node index.js`.  You will be asked a series of questions from the command-line that will help you generate a README file for your project.  If you want to generate a skeleton README file, you may skip (press ENTER) the Description, Installation, Usage, Contributing, Questions, and Tests portions of the command-line survey.  Your generated README file will contain headings for each of these, but you can fill in these sections from within your editor of choice after the application generates your file.  *The generated file will be found at `./build/README.md`.*
-## Sreenshot
+## Screenshot
 <p align="center"><img src="./screen.png" width="400px" /></p>
